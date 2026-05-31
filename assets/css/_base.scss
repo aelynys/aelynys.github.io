@@ -1,0 +1,35 @@
+@use 'variables' as *;
+ 
+// ── Rounded ──────────────────────────────
+@mixin rounded($radius) {
+  border-radius: $radius;
+  background-clip: padding-box;
+}
+ 
+// ── Flex ─────────────────────────────────
+@mixin flex($justify: null, $align: null, $direction: null, $wrap: null) {
+  display: flex;
+  @if $justify   { justify-content: $justify; }
+  @if $align     { align-items: $align; }
+  @if $direction { flex-direction: $direction; }
+  @if $wrap      { flex-wrap: $wrap; }
+}
+ 
+// ── Gradient text ────────────────────────
+@mixin gradient-text($gradient) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+ 
+// ── Respond ──────────────────────────────
+@mixin respond($bp) {
+  @if      $bp == xs  { @media (max-width: 22.5em) { @content; } } // 360px
+  @else if $bp == sm  { @media (max-width: 30em)   { @content; } } // 480px
+  @else if $bp == md  { @media (max-width: 48em)   { @content; } } // 768px
+  @else if $bp == lg  { @media (max-width: 64em)   { @content; } } // 1024px
+  @else if $bp == xl  { @media (max-width: 75em)   { @content; } } // 1200px
+  @else if $bp == xxl { @media (max-width: 87.5em) { @content; } } // 1400px
+}
+ 
