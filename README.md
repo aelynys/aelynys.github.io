@@ -1,2 +1,2 @@
-# aelyn.github.io
+# aelynys.github.io
 Welcome to my work showcase.
