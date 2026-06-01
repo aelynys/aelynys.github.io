@@ -5,7 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Welcome</title>
+    <title>Aelyn Portfolio</title>
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
     <link rel="stylesheet" href="assets/css/style.min.css">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -16,31 +20,31 @@
 
 <body>
     <!--Toggle Day & Night-->
-    <label class="toggle">
+    <div class="toggle">
         <input class="toggle_input" type="checkbox" role="toggle">
-        <svg class="toggle_icon toggle_icon--light" viewBox="0 0 12 12" width="12px" height="12px" aria-hidden="true">
-            <g fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round">
-                <circle cx="6" cy="6" r="2" />
-                <g stroke-dasharray="1.5 1.5">
-                    <polyline points="6 10,6 11.5" transform="rotate(0,6,6)" />
-                    <polyline points="6 10,6 11.5" transform="rotate(45,6,6)" />
-                    <polyline points="6 10,6 11.5" transform="rotate(90,6,6)" />
-                    <polyline points="6 10,6 11.5" transform="rotate(135,6,6)" />
-                    <polyline points="6 10,6 11.5" transform="rotate(180,6,6)" />
-                    <polyline points="6 10,6 11.5" transform="rotate(225,6,6)" />
-                    <polyline points="6 10,6 11.5" transform="rotate(270,6,6)" />
-                    <polyline points="6 10,6 11.5" transform="rotate(315,6,6)" />
+            <svg class="toggle_icon toggle_icon--light" viewBox="0 0 12 12" width="12px" height="12px" aria-hidden="true">
+                <g fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round">
+                    <circle cx="6" cy="6" r="2" />
+                    <g stroke-dasharray="1.5 1.5">
+                        <polyline points="6 10,6 11.5" transform="rotate(0,6,6)" />
+                        <polyline points="6 10,6 11.5" transform="rotate(45,6,6)" />
+                        <polyline points="6 10,6 11.5" transform="rotate(90,6,6)" />
+                        <polyline points="6 10,6 11.5" transform="rotate(135,6,6)" />
+                        <polyline points="6 10,6 11.5" transform="rotate(180,6,6)" />
+                        <polyline points="6 10,6 11.5" transform="rotate(225,6,6)" />
+                        <polyline points="6 10,6 11.5" transform="rotate(270,6,6)" />
+                        <polyline points="6 10,6 11.5" transform="rotate(315,6,6)" />
+                    </g>
                 </g>
-            </g>
-        </svg>
-        <svg class="toggle_icon toggle_icon--dark" viewBox="0 0 12 12" width="12px" height="12px" aria-hidden="true">
-            <g fill="none" stroke="#fff" stroke-width="1" stroke-linejoin="round" transform="rotate(-45,6,6)">
-                <path
-                    d="m9,10c-2.209,0-4-1.791-4-4s1.791-4,4-4c.304,0,.598.041.883.105-.995-.992-2.367-1.605-3.883-1.605C2.962.5.5,2.962.5,6s2.462,5.5,5.5,5.5c1.516,0,2.888-.613,3.883-1.605-.285.064-.578.105-.883.105Z" />
-            </g>
-        </svg>
-        <span class="toggle_sr">Dark Mode</span>
-    </label>
+            </svg>
+            <svg class="toggle_icon toggle_icon--dark" viewBox="0 0 12 12" width="12px" height="12px" aria-hidden="true">
+                <g fill="none" stroke="#fff" stroke-width="1" stroke-linejoin="round" transform="rotate(-45,6,6)">
+                    <path
+                        d="m9,10c-2.209,0-4-1.791-4-4s1.791-4,4-4c.304,0,.598.041.883.105-.995-.992-2.367-1.605-3.883-1.605C2.962.5.5,2.962.5,6s2.462,5.5,5.5,5.5c1.516,0,2.888-.613,3.883-1.605-.285.064-.578.105-.883.105Z" />
+                </g>
+            </svg>
+            <span class="toggle_sr">Dark Mode</span>
+    </div>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -114,19 +118,6 @@ S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715
 
     <!-- Home Section-->
     <section id="home" class="home-section">
-        <!-- MAINTAINANCE IN PROGRESS-->
-        <!-- <div class="home-content">
-            <div class="home-greeting">
-                Hello<span class="greeting-cursor">|</span>
-            </div>
-
-            <div class="home-name">
-                <span class="name-prefix">const</span>
-                <span class="name-operator">=</span>
-                <span class="name-value">Welcome</span>
-                <span class="name-suffix">;</span>
-            </div>
-        </div> -->
     </section>
 
     <!-- About Section-->
@@ -160,391 +151,391 @@ S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715
         <div class="portfolio-grid">
             <div class="portfolio-item col-full">
                 <a class="portfolio-zoom" href="assets/images/gallery101.jpeg">
-                    <img src="assets/images/gallery101.jpeg" alt="" />
+                    <img src="assets/images/gallery101.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-full">
                 <a class="portfolio-zoom" href="assets/images/gallery102.jpeg">
-                    <img src="assets/images/gallery102.jpeg" alt="" />
+                    <img src="assets/images/gallery102.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-full">
                 <a class="portfolio-zoom" href="assets/images/gallery103.jpeg">
-                    <img src="assets/images/gallery103.jpeg" alt="" />
+                    <img src="assets/images/gallery103.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-full">
                 <a class="portfolio-zoom" href="assets/images/gallery104.jpeg">
-                    <img src="assets/images/gallery104.jpeg" alt="" />
+                    <img src="assets/images/gallery104.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-full">
                 <a class="portfolio-zoom" href="assets/images/gallery105.jpeg">
-                    <img src="assets/images/gallery105.jpeg" alt="" />
+                    <img src="assets/images/gallery105.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-third">
                 <a class="portfolio-zoom" href="assets/images/gallery201.jpeg">
-                    <img src="assets/images/gallery201.jpeg" alt="" />
+                    <img src="assets/images/gallery201.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-small">
                 <a class="portfolio-zoom" href="assets/images/gallery202.jpeg">
-                    <img src="assets/images/gallery202.jpeg" alt="" />
+                    <img src="assets/images/gallery202.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-third">
                 <a class="portfolio-zoom" href="assets/images/gallery203.jpeg">
-                    <img src="assets/images/gallery203.jpeg" alt="" />
+                    <img src="assets/images/gallery203.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-small">
                 <a class="portfolio-zoom" href="assets/images/gallery204.jpeg">
-                    <img src="assets/images/gallery204.jpeg" alt="" />
+                    <img src="assets/images/gallery204.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-third">
                 <a class="portfolio-zoom" href="assets/images/gallery205.jpeg">
-                    <img src="assets/images/gallery205.jpeg" alt="" />
+                    <img src="assets/images/gallery205.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-small">
                 <a class="portfolio-zoom" href="assets/images/gallery206.jpeg">
-                    <img src="assets/images/gallery206.jpeg" alt="" />
+                    <img src="assets/images/gallery206.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-third">
                 <a class="portfolio-zoom" href="assets/images/gallery207.jpeg">
-                    <img src="assets/images/gallery207.jpeg" alt="" />
+                    <img src="assets/images/gallery207.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-small">
                 <a class="portfolio-zoom" href="assets/images/gallery208.jpeg">
-                    <img src="assets/images/gallery208.jpeg" alt="" />
+                    <img src="assets/images/gallery208.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-third">
                 <a class="portfolio-zoom" href="assets/images/gallery209.jpeg">
-                    <img src="assets/images/gallery209.jpeg" alt="" />
+                    <img src="assets/images/gallery209.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-small">
                 <a class="portfolio-zoom" href="assets/images/gallery210.jpeg">
-                    <img src="assets/images/gallery210.jpeg" alt="" />
+                    <img src="assets/images/gallery210.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-third">
                 <a class="portfolio-zoom" href="assets/images/gallery211.jpeg">
-                    <img src="assets/images/gallery211.jpeg" alt="" />
+                    <img src="assets/images/gallery211.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-small">
                 <a class="portfolio-zoom" href="assets/images/gallery212.jpeg">
-                    <img src="assets/images/gallery212.jpeg" alt="" />
+                    <img src="assets/images/gallery212.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-third">
                 <a class="portfolio-zoom" href="assets/images/gallery213.jpeg">
-                    <img src="assets/images/gallery213.jpeg" alt="" />
+                    <img src="assets/images/gallery213.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-small">
                 <a class="portfolio-zoom" href="assets/images/gallery214.jpeg">
-                    <img src="assets/images/gallery214.jpeg" alt="" />
+                    <img src="assets/images/gallery214.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-third">
                 <a class="portfolio-zoom" href="assets/images/gallery215.jpeg">
-                    <img src="assets/images/gallery215.jpeg" alt="" />
+                    <img src="assets/images/gallery215.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-small">
                 <a class="portfolio-zoom" href="assets/images/gallery216.jpeg">
-                    <img src="assets/images/gallery216.jpeg" alt="" />
+                    <img src="assets/images/gallery216.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery301.jpeg">
-                    <img src="assets/images/gallery301.jpeg" alt="" />
+                    <img src="assets/images/gallery301.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-fourth">
                 <a class="portfolio-zoom" href="assets/images/gallery302.jpeg">
-                    <img src="assets/images/gallery302.jpeg" alt="" />
+                    <img src="assets/images/gallery302.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-fourth">
                 <a class="portfolio-zoom" href="assets/images/gallery303.jpeg">
-                    <img src="assets/images/gallery303.jpeg" alt="" />
+                    <img src="assets/images/gallery303.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery304.jpeg">
-                    <img src="assets/images/gallery304.jpeg" alt="" />
+                    <img src="assets/images/gallery304.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery305.jpeg">
-                    <img src="assets/images/gallery305.jpeg" alt="" />
+                    <img src="assets/images/gallery305.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery306.jpeg">
-                    <img src="assets/images/gallery306.jpeg" alt="" />
+                    <img src="assets/images/gallery306.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery307.jpeg">
-                    <img src="assets/images/gallery307.jpeg" alt="" />
+                    <img src="assets/images/gallery307.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery308.jpeg">
-                    <img src="assets/images/gallery308.jpeg" alt="" />
+                    <img src="assets/images/gallery308.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery309.jpeg">
-                    <img src="assets/images/gallery309.jpeg" alt="" />
+                    <img src="assets/images/gallery309.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery310.jpeg">
-                    <img src="assets/images/gallery310.jpeg" alt="" />
+                    <img src="assets/images/gallery310.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery311.jpeg">
-                    <img src="assets/images/gallery311.jpeg" alt="" />
+                    <img src="assets/images/gallery311.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery312.jpeg">
-                    <img src="assets/images/gallery312.jpeg" alt="" />
+                    <img src="assets/images/gallery312.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery313.jpeg">
-                    <img src="assets/images/gallery313.jpeg" alt="" />
+                    <img src="assets/images/gallery313.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery314.jpeg">
-                    <img src="assets/images/gallery314.jpeg" alt="" />
+                    <img src="assets/images/gallery314.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery315.jpeg">
-                    <img src="assets/images/gallery315.jpeg" alt="" />
+                    <img src="assets/images/gallery315.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery316.jpeg">
-                    <img src="assets/images/gallery316.jpeg" alt="" />
+                    <img src="assets/images/gallery316.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery317.jpeg">
-                    <img src="assets/images/gallery317.jpeg" alt="" />
+                    <img src="assets/images/gallery317.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery318.jpeg">
-                    <img src="assets/images/gallery318.jpeg" alt="" />
+                    <img src="assets/images/gallery318.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery319.jpeg">
-                    <img src="assets/images/gallery319.jpeg" alt="" />
+                    <img src="assets/images/gallery319.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery320.jpeg">
-                    <img src="assets/images/gallery320.jpeg" alt="" />
+                    <img src="assets/images/gallery320.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery321.jpeg">
-                    <img src="assets/images/gallery321.jpeg" alt="" />
+                    <img src="assets/images/gallery321.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery322.jpeg">
-                    <img src="assets/images/gallery322.jpeg" alt="" />
+                    <img src="assets/images/gallery322.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery323.jpeg">
-                    <img src="assets/images/gallery323.jpeg" alt="" />
+                    <img src="assets/images/gallery323.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery325.jpeg">
-                    <img src="assets/images/gallery325.jpeg" alt="" />
+                    <img src="assets/images/gallery325.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery326.jpeg">
-                    <img src="assets/images/gallery326.jpeg" alt="" />
+                    <img src="assets/images/gallery326.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery327.jpeg">
-                    <img src="assets/images/gallery327.jpeg" alt="" />
+                    <img src="assets/images/gallery327.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery328.jpeg">
-                    <img src="assets/images/gallery328.jpeg" alt="" />
+                    <img src="assets/images/gallery328.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery324.jpeg">
-                    <img src="assets/images/gallery324.jpeg" alt="" />
+                    <img src="assets/images/gallery324.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery329.jpeg">
-                    <img src="assets/images/gallery329.jpeg" alt="" />
+                    <img src="assets/images/gallery329.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery330.jpeg">
-                    <img src="assets/images/gallery330.jpeg" alt="" />
+                    <img src="assets/images/gallery330.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery331.jpeg">
-                    <img src="assets/images/gallery331.jpeg" alt="" />
+                    <img src="assets/images/gallery331.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
                 <a class="portfolio-zoom" href="assets/images/gallery332.jpeg">
-                    <img src="assets/images/gallery332.jpeg" alt="" />
+                    <img src="assets/images/gallery332.jpeg" loading="lazy" alt="" />
                 </a>
             </div>
 
             <div class="portfolio-item col-half">
   <a class="portfolio-zoom" href="assets/images/gallery001.jpeg">
-    <img src="assets/images/gallery001.jpeg" alt="" />
+    <img src="assets/images/gallery001.jpeg" loading="lazy" alt="" />
   </a>
 </div>
 
 <div class="portfolio-item col-half">
   <a class="portfolio-zoom" href="assets/images/gallery002.jpeg">
-    <img src="assets/images/gallery002.jpeg" alt="" />
+    <img src="assets/images/gallery002.jpeg" loading="lazy" alt="" />
   </a>
 </div>
 
 <div class="portfolio-item col-half">
   <a class="portfolio-zoom" href="assets/images/gallery003.jpeg">
-    <img src="assets/images/gallery003.jpeg" alt="" />
+    <img src="assets/images/gallery003.jpeg" loading="lazy" alt="" />
   </a>
 </div>
 
 <div class="portfolio-item col-third">
   <a class="portfolio-zoom" href="assets/images/gallery004.jpeg">
-    <img src="assets/images/gallery004.jpeg" alt="" />
+    <img src="assets/images/gallery004.jpeg" loading="lazy" alt="" />
   </a>
 </div>
 
 <div class="portfolio-item col-third">
   <a class="portfolio-zoom" href="assets/images/gallery005.jpeg">
-    <img src="assets/images/gallery005.jpeg" alt="" />
+    <img src="assets/images/gallery005.jpeg" loading="lazy" alt="" />
   </a>
 </div>
 
 <div class="portfolio-item col-third">
   <a class="portfolio-zoom" href="assets/images/gallery006.jpeg">
-    <img src="assets/images/gallery006.jpeg" alt="" />
+    <img src="assets/images/gallery006.jpeg" loading="lazy" alt="" />
   </a>
 </div>
 
 <div class="portfolio-item col-7">
   <a class="portfolio-zoom" href="assets/images/gallery007.jpeg">
-    <img src="assets/images/gallery007.jpeg" alt="" />
+    <img src="assets/images/gallery007.jpeg" loading="lazy" alt="" />
   </a>
 </div>
 
 <div class="portfolio-item col-5">
   <a class="portfolio-zoom" href="assets/images/gallery008.jpeg">
-    <img src="assets/images/gallery008.jpeg" alt="" />
+    <img src="assets/images/gallery008.jpeg" loading="lazy" alt="" />
   </a>
 </div>
 
 <div class="portfolio-item col-5">
   <a class="portfolio-zoom" href="assets/images/gallery009.jpeg">
-    <img src="assets/images/gallery009.jpeg" alt="" />
+    <img src="assets/images/gallery009.jpeg" loading="lazy" alt="" />
   </a>
 </div>
 
 <div class="portfolio-item col-7">
   <a class="portfolio-zoom" href="assets/images/gallery010.jpeg">
-    <img src="assets/images/gallery010.jpeg" alt="" />
+    <img src="assets/images/gallery010.jpeg" loading="lazy" alt="" />
   </a>
 </div>
 
 <div class="portfolio-item col-7">
   <a class="portfolio-zoom" href="assets/images/gallery011.jpeg">
-    <img src="assets/images/gallery011.jpeg" alt="" />
+    <img src="assets/images/gallery011.jpeg" loading="lazy" alt="" />
   </a>
 </div>
 
 <div class="portfolio-item col-5">
   <a class="portfolio-zoom" href="assets/images/gallery012.jpeg">
-    <img src="assets/images/gallery012.jpeg" alt="" />
+    <img src="assets/images/gallery012.jpeg" loading="lazy" alt="" />
   </a>
 </div>
 

@@ -286,6 +286,11 @@ body:has(.toggle_input:checked) .form-input::placeholder {
   top: 3em;
   left: 2em;
   z-index: 100;
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .toggle_icon,
@@ -322,8 +327,7 @@ body:has(.toggle_input:checked) .form-input::placeholder {
   opacity: 0;
   -webkit-transform: translateX(-0.75em) rotate(30deg) scale(0.75);
           transform: translateX(-0.75em) rotate(30deg) scale(0.75);
-  -webkit-transition-timing-function: cubic-bezier(0.76, 0.05, 0.86, 0.06);
-          transition-timing-function: cubic-bezier(0.76, 0.05, 0.86, 0.06);
+  will-change: transform, opacity;
 }
 
 .toggle_input {
@@ -338,6 +342,8 @@ body:has(.toggle_input:checked) .form-input::placeholder {
        appearance: none;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
   -webkit-transition: background-color 0.3s cubic-bezier(0.76, 0.05, 0.24, 0.95), -webkit-box-shadow 0.15s linear;
   transition: background-color 0.3s cubic-bezier(0.76, 0.05, 0.24, 0.95), -webkit-box-shadow 0.15s linear;
   transition: background-color 0.3s cubic-bezier(0.76, 0.05, 0.24, 0.95), box-shadow 0.15s linear;
@@ -399,8 +405,8 @@ body:has(.toggle_input:checked) .form-input::placeholder {
 }
 .toggle_input:checked ~ .toggle_icon--light {
   opacity: 0;
-  -webkit-transform: translateX(-0.75em) rotate(-30deg) scale(0.75);
-          transform: translateX(-0.75em) rotate(-30deg) scale(0.75);
+  -webkit-transform: translateX(0) rotate(-30deg) scale(0.75);
+          transform: translateX(0) rotate(-30deg) scale(0.75);
 }
 .toggle_input:checked ~ .toggle_icon--light polyline {
   stroke-dashoffset: 1.5;
@@ -420,6 +426,17 @@ body:has(.toggle_input:checked) .form-input::placeholder {
   position: absolute;
   width: 1px;
   height: 1px;
+}
+
+.ios .toggle_icon {
+  top: 0.2em;
+  right: 0.2em;
+  width: 0.65em;
+  height: 0.65em;
+}
+.ios .toggle_input:after {
+  top: 0.1em;
+  left: 0.05em;
 }
 
 .mobile-menu {
@@ -763,6 +780,11 @@ body:has(.toggle_input:checked) .form-input::placeholder {
   margin-bottom: 4rem;
   min-height: 22vh;
 }
+@media (max-width: 48em) {
+  .about-content {
+    margin-bottom: 2rem;
+  }
+}
 
 .about-typing {
   font-size: 1.2rem;
@@ -813,7 +835,7 @@ body:has(.toggle_input:checked) .form-input::placeholder {
 }
 @media (max-width: 48em) {
   .portfolio-grid {
-    margin-bottom: 0;
+    margin-bottom: 2rem;
   }
 }
 
@@ -840,11 +862,6 @@ body:has(.toggle_input:checked) .form-input::placeholder {
 }
 .portfolio-item.col-small {
   width: calc(16.67% - 4px);
-}
-@media (max-width: 48em) {
-  .portfolio-item {
-    width: calc(50% - 4px) !important;
-  }
 }
 @media (max-width: 30em) {
   .portfolio-item {
@@ -878,14 +895,14 @@ body:has(.toggle_input:checked) .form-input::placeholder {
   -webkit-transform: translate(-50%, -50%) scale(1.05);
           transform: translate(-50%, -50%) scale(1.05);
 }
-@media (max-width: 48em) {
+@media (max-width: 64em) {
   .portfolio-zoom {
-    height: 190px;
+    height: 180px;
   }
 }
-@media (max-width: 30em) {
+@media (max-width: 48em) {
   .portfolio-zoom {
-    height: 230px;
+    height: 150px;
   }
 }
 

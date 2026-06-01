@@ -237,7 +237,7 @@ A designer with no fixed style—because your brand dictates the aesthetic, not 
 
 Rather than imposing my own aesthetic, I adapt to your goals, your audience, and your vision. I focus on creating digital experiences and visual identities that tell your story.
 
-I specialize in web design and front end web development. Along the way, I've also worked on graphic design, print materials, illustration, packaging, interior design and a variety of other creative projects.`;
+I specialize in web design and front end web development. Along the way, I've also worked on graphic design, print materials, illustration and a variety of other creative projects.`;
 
 const el = document.getElementById('aboutTyping');
 let i = 0;
@@ -269,6 +269,16 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 
 observer.observe(document.getElementById('about'));
+
+// Detect iOS
+function isIOS() {
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+}
+
+if (isIOS()) {
+  document.documentElement.classList.add('ios');
+}
 
 // disable right click
 document.addEventListener('contextmenu', e => e.preventDefault());

@@ -120,11 +120,6 @@ body {
     }
 }
 
-// img {
-//   max-width: 100%;
-//   height: auto;
-// }
-
 //==================================Navigation Bar======================================/
 .navbar {
     @include rounded(25px);
@@ -150,8 +145,6 @@ body {
 
 .nav-container {
     @include flex(center, center);
-    // max-width: 1200px;
-    // margin: 0 auto;
     padding: 0 $spacing-md;
 
     @include respond(md) {
@@ -214,10 +207,6 @@ body {
         transform: translateX(-50%);
         background: $Color_primary_active;
     }
-
-    // @include respond(xl) {
-    //     font-size: 1.1rem;
-    // }
 }
 
 .hamburger {
@@ -286,6 +275,11 @@ body {
     top: 3em;
     left: 2em;
     z-index: 100;
+    display: inline-block;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .toggle_icon,
@@ -317,7 +311,7 @@ body {
 .toggle_icon--dark {
     opacity: 0;
     transform: translateX(-0.75em) rotate(30deg) scale(0.75);
-    transition-timing-function: $Toggle_trans_timing_in;
+    will-change: transform, opacity;
 }
 
 .toggle_input {
@@ -330,12 +324,12 @@ body {
     appearance: none;
     -webkit-appearance: none;
     -webkit-tap-highlight-color: transparent;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     transition: background-color #{$Toggle_trans_dur} #{$Toggle_trans_timing},
     box-shadow 0.15s linear;
     background-color: $BG_toggle_input;
     border: 0.5px solid $Border_toggle_input;
-    // box-shadow: 0 0 0 0.125em hsla($Hue, 90%, 50%, 0),
-    //     0.125em 0.125em 0.25em hsla($Hue, 90%, 10%, 0.2);
 
     &:focus-visible {
         box-shadow: 0 0 0 0.125em hsl($Hue, 90%, 50%),
@@ -391,7 +385,7 @@ body {
 
         &~.toggle_icon--light {
             opacity: 0;
-            transform: translateX(-0.75em) rotate(-30deg) scale(0.75);
+            transform: translateX(0) rotate(-30deg) scale(0.75);
 
             polyline {
                 stroke-dashoffset: 1.5;
@@ -412,6 +406,23 @@ body {
     position: absolute;
     width: 1px;
     height: 1px;
+}
+
+// ── iOS toggle fix ───────────────────────
+.ios {
+    .toggle_icon {
+        top: 0.2em;
+        right: 0.2em;
+        width: 0.65em;
+        height: 0.65em;
+    }
+
+    .toggle_input {
+        &:after {
+            top: 0.1em;
+            left: 0.05em;
+        }
+    }
 }
 
 //==================================Mobile menu======================================/
@@ -612,74 +623,6 @@ body {
     min-height: 100vh;
 }
 
-// .home-content {
-//     display: none;
-//     max-width: $bp-xxl;
-//     z-index: 1;
-//     position: fixed;
-//     top: 6.5em;
-//     left: 1.5em;
-
-//     @include respond(md) {
-//         // @include flex(null, center);
-//         padding: 0 $spacing-sm;
-//     }
-
-//     @include respond(sm) {
-//         padding: 0 0.8rem;
-//     }
-// }
-
-// .home-greeting {
-//     font-size: 1.2rem;
-//     color: $Color_primary;
-//     margin-bottom: $spacing-sm;
-//     @include flex(null, center);
-//     gap: 0.5rem;
-// }
-
-// .greeting-cursor {
-//     animation: blink 1s infinite;
-//     color: $Color_primary;
-// }
-
-// .home-name {
-//     font-size: 4rem;
-//     font-weight: 800;
-//     margin-bottom: $spacing-md;
-//     line-height: 1.2;
-
-//     @include respond(md) {
-//         font-size: 2rem;
-//         margin-bottom: $spacing-sm;
-//     }
-
-//     @include respond(sm) {
-//         font-size: 1.8rem;
-//     }
-
-//     @include respond(xs) {
-//         font-size: 1.5rem;
-//     }
-// }
-
-// .name-prefix {
-//     color: $BGmid2Color2;
-// }
-
-// .name-operator {
-//     color: $BGmid1Color2;
-//     margin: 0 0.5rem;
-// }
-
-// .name-value {
-//     @include gradient-text($Color_gradient);
-// }
-
-// .name-suffix {
-//     color: $Color_primary;
-// }
-
 //===================================Shared Header====================================/
 .about-section,
 .portfolio-section,
@@ -698,12 +641,10 @@ body {
 
     @include respond(md) {
         width: 85%;
-        // padding: $spacing-lg 0;
     }
 
     @include respond(sm) {
         width: 90%;
-        // padding: $spacing-md $spacing-sm;
     }
 }
 
@@ -759,9 +700,9 @@ body {
     margin-bottom: $spacing-xl;
     min-height: 22vh;
 
-    // @include respond(md) {
-    //     margin-bottom: 0;
-    // }
+    @include respond(md) {
+        margin-bottom: $spacing-md;
+    }
 }
 
 .about-typing {
@@ -783,7 +724,6 @@ body {
     }
 
     @include respond(sm) {
-        // font-size: 0.9rem;
         line-height: 1.6;
     }
 }
@@ -804,7 +744,7 @@ body {
     margin: 0 auto $spacing-xl;
 
     @include respond(md) {
-        margin-bottom: 0;
+        margin-bottom: $spacing-md;
     }
 }
 
@@ -832,17 +772,13 @@ body {
     &.col-third {
         width: calc(33.33% - 4px);
     }
-    
+
     &.col-fourth {
         width: calc(25% - 4px);
     }
 
     &.col-small {
         width: calc(16.67% - 4px);
-    }
-
-    @include respond(md) {
-        width: calc(50% - 4px) !important;
     }
 
     @include respond(sm) {
@@ -866,24 +802,18 @@ body {
         object-fit: cover;
         transform: translate(-50%, -50%);
         transition: transform 0.3s ease;
-
-        // .portfolio-item.col-small &,
-        // .portfolio-item.col-third & {
-        //     width: auto;
-        //     height: 100%;
-        // }
     }
 
     &:hover img {
         transform: translate(-50%, -50%) scale(1.05);
     }
 
-    @include respond(md) {
-        height: 190px;
+    @include respond(lg) {
+        height: 180px;
     }
 
-    @include respond(sm) {
-        height: 230px;
+    @include respond(md) {
+        height: 150px;
     }
 }
 
