@@ -32,4 +32,3 @@
   @else if $bp == xl  { @media (max-width: 75em)   { @content; } } // 1200px
   @else if $bp == xxl { @media (max-width: 87.5em) { @content; } } // 1400px
 }
- 
