@@ -1,0 +1,86 @@
+@use 'sass:math';
+@use 'sass:string';
+ 
+// n is number of stars required
+@function multiple-box-shadow($n) {
+  $value: '#{math.random(2000)}px #{math.random(2000)}px #FFF';
+  @for $i from 2 through $n {
+    $value: '#{$value} , #{math.random(2000)}px #{math.random(2000)}px #FFF';
+  }
+  @return string.unquote($value);
+}
+ 
+$shadows-small:  multiple-box-shadow(700);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-big:    multiple-box-shadow(100);
+
+// Image folder
+$Folder_img: "../images/";
+
+// ── Colors ───────────────────────────────
+$Color_main:           #ffffff;
+$Color_blk:            #000000;
+$Color_grey:           #808aac;
+$Color_primary:        #4c80ca;
+$Color_primary_active: #60ab72;
+$Color_primary--dark:  rgba(255, 255, 255, 0.6);
+$Color_path_cloud:     rgba(255, 255, 255, 0.15);
+$Color_box_shadow:     rgba(0, 0, 0, 0.1);
+$Color_box_shadow2:    rgba(0, 0, 0, 0.25);
+
+// ── Gradients ────────────────────────────
+$Color_gradient:  linear-gradient(135deg, #4f9fac 0%, #406391 50%, #7c63b0 100%);
+$Color_gradient2: linear-gradient(135deg, #aef4ff 0%, #99c5ff 50%, #d8c4ff 100%);
+
+// ── Title ────────────────────────────────
+$Color_title-bracket2: #b9d0ff;
+
+// ── Backgrounds ──────────────────────────
+$BG_main:        rgba(255, 255, 255, 0.3);
+$BG_nav-link:    rgba(255, 255, 255, 0.7);
+$BG_mobile-menu: rgba(255, 255, 255, 0.75);
+$BG_overlay:     rgba(136, 136, 136, 0.7);
+$BG_contact-item: rgba(255, 255, 255, 0.05);
+
+// ── Day gradient ─────────────────────────
+$BGstartColor: #90b8fd;
+$BGmid1Color:  #7ed9ff;
+$BGmid2Color:  #c6bbef;
+$BGendColor:   #ab8cc3;
+
+// ── Night gradient ────────────────────────
+$BGstartColor2: #174085;
+$BGmid1Color2:  #246682;
+$BGmid2Color2:  #37396b;
+$BGendColor2:   #2a2f5c;
+
+// ── Toggle ───────────────────────────────
+$BG_toggle_input:         #2662b8;
+$BG_toggle_input2:        #54ba23;
+$BG_toggle_input_checked: #1e85dc;
+$Border_toggle_input:     rgba(255, 255, 255, 0.25);
+$Mask_toggle_input:       rgba(255, 255, 255, 0);
+$Hue:                     223;
+$Toggle_trans_dur:         0.3s;
+$Toggle_trans_timing:      cubic-bezier(0.76, 0.05, 0.24, 0.95);
+$Toggle_trans_timing_out:  cubic-bezier(0.05, 0.76, 0.06, 0.86);
+$Toggle_trans_timing_in:   cubic-bezier(0.76, 0.05, 0.86, 0.06);
+
+// ── Breakpoints ──────────────────────────
+$bp-xxl: 1400px;
+
+// ── Spacing ──────────────────────────────
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 2rem;
+$spacing-lg: 3rem;
+$spacing-xl: 4rem;
+
+// ── Transitions ──────────────────────────
+$transition:        0.2s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-fast:   0.15s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-smooth: 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+// ── Fonts ────────────────────────────────
+$font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$font-mono:    'Courier New', Courier, monospace;
