@@ -837,6 +837,7 @@ body {
     @include flex(center, center);
     gap: $spacing-sm;
     margin-bottom: $spacing-sm;
+    width: 100%;
 }
 
 .cat-tab {
