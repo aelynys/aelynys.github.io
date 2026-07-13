@@ -171,3 +171,40 @@ function isIOS() {
 if (isIOS()) {
   document.documentElement.classList.add('ios');
 }
+
+  const form = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('contactSubmitBtn');
+  const status = document.getElementById('contactFormStatus');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    submitBtn.disabled = true;
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = 'Sending...';
+    status.style.display = 'none';
+
+    try {
+      const response = await fetch('https://formspree.io/f/mrengpwq', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+
+      if (response.ok) {
+        form.reset();
+        status.textContent = "Thanks — your message has been sent. I'll get back to you soon.";
+        status.style.color = '#3a5c59';
+      } else {
+        status.textContent = 'Something went wrong. Please try again or email me directly.';
+        status.style.color = '#b3453e';
+      }
+    } catch (error) {
+      status.textContent = 'Something went wrong. Please check your connection and try again.';
+      status.style.color = '#b3453e';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+      status.style.display = 'block';
+    }
+  });
